@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: helloworld
-  name: helloworld
+    app: {{.Values.name}}
+  name: {{.Values.name}}
   namespace: {{.Values.namespace}}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: helloworld
+      app: {{.Values.name}}
   template:
     metadata:
       labels:
-        app: helloworld
+        app: {{.Values.name}}
     spec:
       containers:
       - image: {{.Values.image}}

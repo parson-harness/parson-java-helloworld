@@ -4,7 +4,7 @@ metadata:
   name: {{.Values.name}}-svc
   namespace: {{.Values.namespace}}
   labels:
-    app: {{.Values.name}}
+    app: parson-java-helloworld
 spec:
   type: {{.Values.serviceType}}
   ports:

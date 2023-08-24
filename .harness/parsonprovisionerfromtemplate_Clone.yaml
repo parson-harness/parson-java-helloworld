@@ -1,0 +1,22 @@
+---
+pipeline:
+  template:
+    templateRef: "parsondynamicprovisioner"
+    versionLabel: "1.0"
+    templateInputs:
+      variables:
+      - name: "env"
+        type: "String"
+        value: "<+input>"
+      - name: "svc"
+        type: "String"
+        value: "<+input>"
+      - name: "apikey"
+        type: "String"
+        default: "<+secrets.getValue(\"parsonapikey\")>"
+        value: "<+input>"
+  tags: {}
+  projectIdentifier: "parson"
+  orgIdentifier: "SE_Sandbox"
+  identifier: "parsonprovisionerfromtemplate_Clone"
+  name: "parson-provisioner-from-template - Clone"

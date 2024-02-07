@@ -1,0 +1,11 @@
+inputSet:
+  name: test-two
+  identifier: testtwo
+  orgIdentifier: SE_Sandbox
+  projectIdentifier: parson
+  pipeline:
+    identifier: citestfromapi_Clone
+    variables:
+      - name: payload
+        type: String
+        value: test

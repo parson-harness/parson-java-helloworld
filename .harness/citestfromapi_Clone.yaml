@@ -1,0 +1,40 @@
+pipeline:
+  projectIdentifier: parson
+  orgIdentifier: SE_Sandbox
+  tags: {}
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: false
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    shell: Sh
+                    command: echo <+pipeline.variables.payload>
+          caching:
+            enabled: false
+            paths: []
+          slsa_provenance:
+            enabled: false
+  variables:
+    - name: payload
+      type: String
+      description: ""
+      required: false
+      value: <+input>
+  identifier: citestfromapi_Clone
+  name: ci-test-from-api - Clone

@@ -1,0 +1,11 @@
+inputSet:
+  name: api-test
+  identifier: apitest
+  orgIdentifier: SE_Sandbox
+  projectIdentifier: parson
+  pipeline:
+    identifier: citestfromapi_Clone
+    variables:
+      - name: payload
+        type: String
+        value: <+trigger.payload.my_data>
